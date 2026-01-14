@@ -3,97 +3,97 @@ import type { Metadata } from "next";
 import FAQAccordion from "./FAQAccordion";
 
 export const metadata: Metadata = {
-    title: "Dental Treatment Timeline & Healing | TurkiyeDental",
-    description: "Learn how long dental treatments in Turkey take, what happens day by day, and what to expect during healing after veneers, crowns, implants and full-mouth restorations.",
+    title: "Zamanlama | Diş Tedavi Rehberi",
+    description: "Tedavi süreci, ortalama zamanlama ve iyileşme notlari için kısa rehber.",
 };
 
 const timelineCards = [
     {
-        title: "Veneers / Crowns",
-        badge: "Single Trip",
-        stay: "5–7 days",
-        points: ["Consultation and prep", "Lab fabrication", "Fitting and bite checks"],
+        title: "Lamina / Kaplama",
+        badge: "Ortalama",
+        stay: "Degisir",
+        points: ["Muayene ve planlama", "Prova ve uyum", "Kontrol randevusu"],
     },
     {
-        title: "Dental Implants",
-        badge: "Two Trips",
-        stay: "Visit 1: 2–3 days • Visit 2: 5–7 days",
-        points: ["Surgery and healing checks", "Impressions and final crowns on second visit"],
+        title: "İmplant",
+        badge: "Degisir",
+        stay: "Vaka bazli",
+        points: ["Cerrahi ve iyileşme", "Protez asamasi", "Kontrol"],
     },
     {
-        title: "All-on-4 / Full Mouth",
-        badge: "Single Trip",
-        stay: "7–10 days",
-        points: ["Surgery with temporaries", "Follow-ups and bite refinement"],
+        title: "All-on-4 / Tam Çene",
+        badge: "Degisir",
+        stay: "Vaka bazli",
+        points: ["Cerrahi ve geçici disler", "Kontroller", "Kapanis ayari"],
     },
     {
-        title: "Gum Tx / Cleaning / Whitening",
-        badge: "Single Trip",
-        stay: "2–4 days",
-        points: ["Evaluation and hygiene", "Comfort checks before departure"],
+        title: "Diş Eti / Temizlik",
+        badge: "Kısa süre",
+        stay: "Degisir",
+        points: ["Değerlendirme", "Temizlik", "Kısa kontrol"],
     },
 ];
 
 const veneerWeek = [
-    { day: "Day 1", title: "Arrival & consultation", body: "Exam, scans, photos, and treatment confirmation." },
-    { day: "Day 2", title: "Preparation & temporaries", body: "Prep teeth if needed; place comfortable temporaries." },
-    { day: "Day 3–4", title: "Lab work / try-in", body: "Lab fabricates; possible try-in for shade/fit." },
-    { day: "Day 5–6", title: "Final fitting & adjustments", body: "Seat final work, adjust bite, polish." },
-    { day: "Day 7", title: "Final check & return", body: "Review care instructions and travel readiness." },
+    { day: "Gün 1", title: "Muayene", body: "Görüntüleme ve plan netlesir." },
+    { day: "Gün 2", title: "Hazırlık", body: "Gerekli islem ve olcu." },
+    { day: "Gün 3–4", title: "Laboratuvar", body: "Uretim ve prova." },
+    { day: "Gün 5–6", title: "Uyum", body: "Prova ve ayarlar." },
+    { day: "Gün 7", title: "Kontrol", body: "Bakım ve takip notlari." },
 ];
 
 const implantVisits = [
     {
-        visit: "Visit 1 – Implant Placement",
-        stay: "2–3 days",
-        bullets: ["Consultation and planning", "Surgery day with local anesthesia", "Post-op check and travel clearance"],
+        visit: "1. Ziyaret – Cerrahi",
+        stay: "Degisir",
+        bullets: ["Muayene ve planlama", "Cerrahi uygulama", "Kontrol"],
     },
     {
-        visit: "Visit 2 – Final Teeth",
-        stay: "5–7 days",
-        bullets: ["Impressions or scans", "Try-in / framework checks", "Final fit and bite adjustments"],
+        visit: "2. Ziyaret – Protez",
+        stay: "Degisir",
+        bullets: ["Olcu / tarama", "Prova", "Son uyum"],
     },
 ];
 
 const healingBlocks = [
     {
-        title: "First 24–48 Hours",
-        body: "Mild pain or swelling is common. Use cold packs, prescribed meds, and rest. Soft foods recommended.",
+        title: "İlk 24–48 Saat",
+        body: "Hafif hassasiyet olabilir. Hekim onerilerine uyun.",
     },
     {
-        title: "First Week",
-        body: "Sensitivity or tenderness may persist. Keep the area clean with gentle brushing and any prescribed rinses.",
+        title: "İlk Hafta",
+        body: "Bakım ve hijyen talimatlari onemlidir.",
     },
     {
-        title: "Long-Term Healing",
-        body: "Tissues and bite continue to settle. Follow review schedules and report any bite changes or pain.",
+        title: "Uzun Donem",
+        body: "Kontrollerle süreç izlenir.",
     },
 ];
 
 const healingCompare = [
     {
-        title: "Veneers & Crowns",
-        details: ["Sensitivity for a few days", "Most feel normal within 1–2 weeks"],
+        title: "Lamina / Kaplama",
+        details: ["Kısa sureli hassasiyet", "Uygunluk kontrolleri"],
     },
     {
-        title: "Implants",
-        details: ["Gum healing in 1–2 weeks", "Bone integration over 3–6 months"],
+        title: "İmplant",
+        details: ["İyileşme süreci degisir", "Kontrollerle izlenir"],
     },
     {
         title: "All-on-4",
-        details: ["Initial adjustment to temporaries", "Refinement when final teeth are placed"],
+        details: ["Geçici dislere uyum", "Son uyum ayarlari"],
     },
     {
-        title: "Gum Treatment",
-        details: ["Tenderness and slight bleeding early", "Noticeable comfort improvement in 1–2 weeks"],
+        title: "Diş Eti Tedavisi",
+        details: ["İlk gunlerde hassasiyet", "Kontrollerle duzelme"],
     },
 ];
 
 const faqItems = [
-    { q: "How long will my gums be sore after treatment?", a: "Mild soreness is common for a few days. Follow rinsing and medication instructions and contact us if pain worsens." },
-    { q: "When can I fly back home after implants?", a: "Most patients fly 24–48 hours after surgery; your clinician will confirm based on your case." },
-    { q: "When can I eat normally again?", a: "Soft foods are advised initially. Return to normal eating as guided by your clinician and the treatment type." },
-    { q: "Can I go swimming or to the gym while healing?", a: "Avoid strenuous exercise for several days after surgery. Light walking is usually fine; ask before swimming." },
+    { q: "İyileşme ne kadar surer?", a: "Tedavi turu ve vakaya göre degisir; hekim netlestirir." },
+    { q: "Ne zaman normal beslenebilirim?", a: "Hekimin talimatlarina göre ilerlenir." },
+    { q: "Kontroller zorunlu mu?", a: "Uygunluk ve takip için onemlidir." },
+    { q: "Hassasiyet normal mi?", a: "Kısa sureli hassasiyet olabilir." },
 ];
 
 export default function TimelinePage() {
@@ -102,23 +102,23 @@ export default function TimelinePage() {
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
                 {/* Hero */}
                 <section className="max-w-3xl mx-auto text-center space-y-4">
-                    <p className="text-xs uppercase tracking-[0.14em] text-brand-muted">How It Works</p>
-                    <h1 className="text-3xl sm:text-4xl font-bold">Timeline &amp; Healing After Dental Treatment</h1>
+                    <p className="text-xs uppercase tracking-[0.14em] text-brand-muted">Nasıl Çalışır</p>
+                    <h1 className="text-3xl sm:text-4xl font-bold">Zamanlama ve İyileşme</h1>
                     <p className="text-lg text-gray-700">
-                        See how long typical treatments take when you travel to Turkey and what to expect as you heal. This overview helps you plan flights, hotels, and recovery with confidence.
+                        Tedavi süreci ve iyileşme adimlari için kısa bir özet.
                     </p>
                     <div className="flex flex-wrap justify-center gap-3">
                         <a
                             href="#summary"
                             className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-teal-600 text-white font-semibold hover:bg-teal-700 transition"
                         >
-                            See Timelines by Treatment
+                            Tedavi Sureleri
                         </a>
                         <a
                             href="#sample-week"
                             className="inline-flex items-center justify-center px-4 py-3 text-teal-700 font-semibold hover:text-teal-800 transition"
                         >
-                            Plan your trip days →
+                            Örnek Akis →
                         </a>
                     </div>
                 </section>
@@ -127,22 +127,22 @@ export default function TimelinePage() {
                 <section className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-8">
                     <div className="md:grid md:grid-cols-2 md:gap-8 space-y-6 md:space-y-0">
                         <div className="space-y-3">
-                            <h2 className="text-2xl font-semibold">Why Understanding Your Timeline Is Important</h2>
-                            <p className="text-gray-700">Knowing how many days you need helps you book the right flights and hotel dates.</p>
-                            <p className="text-gray-700">Clear expectations reduce stress about work leave, childcare, and recovery time.</p>
-                            <p className="text-gray-700">Every mouth is different—use these guides, then confirm a personalised plan before you book.</p>
+                            <h2 className="text-2xl font-semibold">Zamanlama Neden Önemli?</h2>
+                            <p className="text-gray-700">Tedavi turu, randevu araliklarini belirler.</p>
+                            <p className="text-gray-700">Planlama, süreci daha sakin yönetmenize yardimci olur.</p>
+                            <p className="text-gray-700">Kesin plan hekim muayenesinde netlesir.</p>
                         </div>
                         <div className="space-y-3">
-                            <h3 className="text-lg font-semibold">Healing with confidence</h3>
-                            <p className="text-gray-700">Understand when discomfort is normal, when to rest, and when to contact the clinic.</p>
-                            <p className="text-gray-700">Set aside time for follow-up checks so your final result feels comfortable and stable.</p>
+                            <h3 className="text-lg font-semibold">İyileşme Notlari</h3>
+                            <p className="text-gray-700">Hassasiyet ve kontroller için hekim talimatlarini izleyin.</p>
+                            <p className="text-gray-700">Kontrolleri aksatmayin.</p>
                         </div>
                     </div>
                 </section>
 
                 {/* Summary cards */}
                 <section id="summary" className="space-y-6">
-                    <h2 className="text-2xl font-semibold">Treatment Timelines at a Glance</h2>
+                    <h2 className="text-2xl font-semibold">Tedavi Sureleri (Özet)</h2>
                     <div className="grid gap-6 md:grid-cols-2">
                         {timelineCards.map((card) => (
                             <div key={card.title} className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 space-y-3">
@@ -163,7 +163,7 @@ export default function TimelinePage() {
 
                 {/* Sample week */}
                 <section id="sample-week" className="space-y-6">
-                    <h2 className="text-2xl font-semibold">Example 7-Day Timeline for Veneers or Crowns</h2>
+                    <h2 className="text-2xl font-semibold">Örnek 7 Gunluk Akis</h2>
                     <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
                         <ol className="relative border-l border-teal-100 pl-5 space-y-4">
                             {veneerWeek.map((item) => (
@@ -182,7 +182,7 @@ export default function TimelinePage() {
 
                 {/* Implants two-trip */}
                 <section className="space-y-6">
-                    <h2 className="text-2xl font-semibold">Timeline for Dental Implants (Two Visits)</h2>
+                    <h2 className="text-2xl font-semibold">İmplant Ziyaretleri</h2>
                     <div className="grid md:grid-cols-2 gap-6">
                         {implantVisits.map((visit) => (
                             <div key={visit.visit} className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 space-y-3">
@@ -199,13 +199,13 @@ export default function TimelinePage() {
                         ))}
                     </div>
                     <p className="text-sm text-gray-700 bg-teal-50 border border-teal-100 rounded-xl px-4 py-3">
-                        Healing between visits typically ranges from 3–6 months so bone can integrate with the implant before the final teeth are fitted.
+                        Ziyaretler arasi süre, vakaya göre degisir ve hekim tarafindan belirlenir.
                     </p>
                 </section>
 
                 {/* Healing expectations */}
                 <section className="space-y-6">
-                    <h2 className="text-2xl font-semibold">Healing After Your Treatment – What to Expect</h2>
+                    <h2 className="text-2xl font-semibold">İyileşme Notlari</h2>
                     <div className="grid gap-4 md:grid-cols-3">
                         {healingBlocks.map((block) => (
                             <div key={block.title} className="bg-white rounded-2xl shadow-sm border border-gray-200 p-5 space-y-2">
@@ -219,85 +219,85 @@ export default function TimelinePage() {
 
                 {/* Pain & comfort */}
                 <section className="space-y-6">
-                    <h2 className="text-2xl font-semibold">Pain, Swelling and Comfort</h2>
+                    <h2 className="text-2xl font-semibold">Agri ve Konfor</h2>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-5 space-y-2">
-                            <h3 className="text-lg font-semibold text-brand-secondary">Managing discomfort</h3>
-                            <p className="text-gray-700 text-sm">Local anesthesia is used during procedures. Mild to moderate soreness is typical afterward; prescribed pain relief and cold packs usually help.</p>
-                            <p className="text-gray-700 text-sm">Rest, avoid strenuous activity for a few days, and follow medication and rinse instructions.</p>
+                            <h3 className="text-lg font-semibold text-brand-secondary">Hassasiyet</h3>
+                            <p className="text-gray-700 text-sm">Kısa sureli hassasiyet normal olabilir. Hekim talimatlarini izleyin.</p>
+                            <p className="text-gray-700 text-sm">Dinlenme ve bakım onemlidir.</p>
                         </div>
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-5 space-y-2">
-                            <h3 className="text-lg font-semibold text-brand-secondary">Normal vs call us</h3>
+                            <h3 className="text-lg font-semibold text-brand-secondary">Ne zaman kliniğe ulasin?</h3>
                             <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-                                <li>Normal: mild swelling, tenderness, small spots of blood.</li>
-                                <li>Call us: severe pain, heavy bleeding, fever, or bite feels off.</li>
-                                <li>Call us: swelling that worsens after day 3–4 or any numbness concerns.</li>
+                                <li>Uzayan agri veya belirgin sislik.</li>
+                                <li>Ates, siddetli kanama.</li>
+                                <li>Kapanista belirgin degisiklik.</li>
                             </ul>
                         </div>
                     </div>
                     <div className="bg-teal-50 border border-teal-100 rounded-xl px-4 py-3 text-sm text-teal-900">
-                        This page is for general information only and does not replace personal medical advice. Your clinician will give you instructions specific to your case.
+                        Bu sayfa genel bilgilendirme amaclidir; kesin talimat hekim tarafindan verilir.
                     </div>
                 </section>
 
                 {/* Eating */}
                 <section className="space-y-6">
-                    <h2 className="text-2xl font-semibold">What Can You Eat While You Heal?</h2>
+                    <h2 className="text-2xl font-semibold">Beslenme</h2>
                     <div className="grid md:grid-cols-3 gap-4">
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 space-y-2">
-                            <h3 className="text-lg font-semibold">Veneers / Crowns</h3>
+                            <h3 className="text-lg font-semibold">Lamina / Kaplama</h3>
                             <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-                                <li>Soft foods for the first days.</li>
-                                <li>Avoid very hard, sticky, or chewy items.</li>
+                                <li>İlk gunlerde yumuşak gidalar.</li>
+                                <li>Sert ve yapiskan gidalaru erteleyin.</li>
                             </ul>
                         </div>
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 space-y-2">
-                            <h3 className="text-lg font-semibold">Implants</h3>
+                            <h3 className="text-lg font-semibold">İmplant</h3>
                             <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-                                <li>Soft diet; do not chew on the surgical side.</li>
-                                <li>Follow implant-specific rinse and hygiene guidance.</li>
+                                <li>Hekimin onerilerine göre beslenin.</li>
+                                <li>Bakım talimatlarini izleyin.</li>
                             </ul>
                         </div>
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 space-y-2">
-                            <h3 className="text-lg font-semibold">Gum treatments</h3>
+                            <h3 className="text-lg font-semibold">Diş Eti Tedavisi</h3>
                             <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-                                <li>Gentle temperatures; avoid spicy or crunchy foods initially.</li>
-                                <li>Use prescribed rinses as directed.</li>
+                                <li>Asiri sicak veya sert gidalardan kacinin.</li>
+                                <li>Önerilen gargaralari kullanin.</li>
                             </ul>
                         </div>
                     </div>
                     <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 space-y-2">
-                        <h3 className="text-lg font-semibold">Activities &amp; Rest</h3>
-                        <p className="text-gray-700 text-sm">Plan light walking, avoid heavy exercise for a few days, and follow clinician guidance on returning to work or sports.</p>
+                        <h3 className="text-lg font-semibold">Dinlenme</h3>
+                        <p className="text-gray-700 text-sm">İlk gunlerde agir efordan kacinin.</p>
                     </div>
                 </section>
 
                 {/* Oral care */}
                 <section className="space-y-6">
-                    <h2 className="text-2xl font-semibold">How to Look After Your Teeth While Healing</h2>
+                    <h2 className="text-2xl font-semibold">Bakım</h2>
                     <div className="grid md:grid-cols-2 gap-4">
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 space-y-2">
-                            <h3 className="text-lg font-semibold">Brushing</h3>
-                            <p className="text-gray-700 text-sm">Use a soft toothbrush. Avoid brushing directly on surgical sites until cleared; keep other areas clean.</p>
+                            <h3 className="text-lg font-semibold">Fircalama</h3>
+                            <p className="text-gray-700 text-sm">Yumuşak firca kullanin; hekim onermeden cerrahi bolgeye dokunmayin.</p>
                         </div>
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 space-y-2">
-                            <h3 className="text-lg font-semibold">Mouthwash / rinses</h3>
-                            <p className="text-gray-700 text-sm">Follow prescribed rinses; gentle warm saltwater may be advised. Avoid vigorous swishing early on.</p>
+                            <h3 className="text-lg font-semibold">Gargara</h3>
+                            <p className="text-gray-700 text-sm">Önerilen gargara ve bakım talimatlarini izleyin.</p>
                         </div>
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 space-y-2">
-                            <h3 className="text-lg font-semibold">Flossing / interdental</h3>
-                            <p className="text-gray-700 text-sm">Resume flossing once tissues allow. Use interdental brushes carefully and only when approved.</p>
+                            <h3 className="text-lg font-semibold">Diş ipi</h3>
+                            <p className="text-gray-700 text-sm">Hekimin onayi ile baslayin.</p>
                         </div>
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 space-y-2">
-                            <h3 className="text-lg font-semibold">Night guards</h3>
-                            <p className="text-gray-700 text-sm">If you grind teeth, ask about a night guard after final restorations are placed.</p>
+                            <h3 className="text-lg font-semibold">Gece plakki</h3>
+                            <p className="text-gray-700 text-sm">Diş sikma varsa hekimle gorusun.</p>
                         </div>
                     </div>
                 </section>
 
                 {/* Healing comparison */}
                 <section className="space-y-6">
-                    <h2 className="text-2xl font-semibold">Healing Timeline by Treatment Type</h2>
+                    <h2 className="text-2xl font-semibold">Tedaviye Göre İyileşme</h2>
                     <div className="grid md:grid-cols-2 gap-4">
                         {healingCompare.map((item) => (
                             <div key={item.title} className="bg-white rounded-2xl shadow-sm border border-gray-200 p-4 space-y-2">
@@ -314,7 +314,7 @@ export default function TimelinePage() {
 
                 {/* FAQ */}
                 <section className="space-y-6">
-                    <h2 className="text-2xl font-semibold">Timeline &amp; Healing – Frequently Asked Questions</h2>
+                    <h2 className="text-2xl font-semibold">Sık Sorulanlar</h2>
                     <FAQAccordion items={faqItems} />
                 </section>
             </div>
@@ -324,21 +324,21 @@ export default function TimelinePage() {
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                         <div className="space-y-2">
-                            <h2 className="text-2xl font-semibold">Get a Personalised Timeline for Your Case</h2>
-                            <p className="text-sm text-teal-50">Every mouth is unique. Send your photos or X-rays and we’ll confirm your exact visits, healing time, and budget.</p>
+                            <h2 className="text-2xl font-semibold">Ön değerlendirme alin</h2>
+                            <p className="text-sm text-teal-50">Kısa bilgi ve varsa fotoğraf ekleyin; süreç başlıklarını ozetleyelim.</p>
                         </div>
                         <div className="flex flex-wrap gap-3">
                             <Link
                                 href="/upload"
                                 className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-white text-teal-700 font-semibold hover:bg-teal-50 transition"
                             >
-                                Send Your Photos for a Free Plan
+                                Ön Değerlendirme
                             </Link>
                             <a
                                 href="mailto:dentalclinicturkiye@gmail.com"
                                 className="inline-flex items-center justify-center px-5 py-3 rounded-full text-white font-semibold hover:text-teal-50 transition"
                             >
-                                Ask a Question About Healing
+                                E-posta ile sor
                             </a>
                         </div>
                     </div>

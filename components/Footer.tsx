@@ -11,9 +11,9 @@ export default function Footer() {
             <div className="mx-auto max-w-7xl px-4 md:px-8 py-14 grid gap-10 md:grid-cols-4">
                 {/* Brand */}
                 <div>
-                    <h2 className="text-2xl font-extrabold mb-4 text-[#1b76d1]">TürkiyeDental</h2>
+                    <h2 className="text-2xl font-extrabold mb-4 text-[#1b76d1]">Diş Tedavi Rehberi</h2>
                     <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                        Empowering patients with transparent, clinic-independent dental guidance and second opinions worldwide.
+                        Klinik dışı, tarafsız bilgilendirme ile hastalarin tedavi surecini anlamasina yardimci olur.
                     </p>
                     <div className="flex gap-4 mt-5">
                         <Link href="https://www.facebook.com/profile.php?id=61584497004756" className="hover:text-[#21CDC0]" aria-label="Facebook">
@@ -28,19 +28,19 @@ export default function Footer() {
 
                 {/* Quick Links */}
                 <div>
-                    <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                    <h3 className="text-lg font-semibold mb-4">Hızlı Bağlantılar</h3>
                     <ul className="space-y-2 text-gray-600">
-                        <li><Link href="/" className="hover:text-[#1b76d1]">Home</Link></li>
-                        <li><Link href="/treatments" className="hover:text-[#1b76d1]">Treatments</Link></li>
-                        <li><Link href="/about" className="hover:text-[#1b76d1]">About Us</Link></li>
-                        <li><Link href="/start" className="hover:text-[#1b76d1]">Get a Second Opinion</Link></li>
-                        <li><Link href="/guides/legal" className="hover:text-[#1b76d1]">Legal Guide</Link></li>
+                        <li><Link href="/" className="hover:text-[#1b76d1]">Anasayfa</Link></li>
+                        <li><Link href="/treatments" className="hover:text-[#1b76d1]">Tedaviler</Link></li>
+                        <li><Link href="/about" className="hover:text-[#1b76d1]">Hakkımızda</Link></li>
+                        <li><Link href="/start" className="hover:text-[#1b76d1]">Ön Değerlendirme</Link></li>
+                        <li><Link href="/guides/legal" className="hover:text-[#1b76d1]">KVKK Özeti</Link></li>
                     </ul>
                 </div>
 
                 {/* Contact */}
                 <div>
-                    <h3 className="text-lg font-semibold mb-4">Contact</h3>
+                    <h3 className="text-lg font-semibold mb-4">İletişim</h3>
                     <ul className="space-y-3 text-gray-600 text-sm md:text-base">
                         <li className="flex items-start gap-3">
                             <Mail className="h-5 w-5 text-[#1b76d1] mt-0.5" />
@@ -54,16 +54,16 @@ export default function Footer() {
                         </li>
                         <li className="flex items-start gap-3">
                             <MapPin className="h-5 w-5 text-[#1b76d1] mt-0.5" />
-                            <span>New York • Toronto</span>
+                            <span>Turkiye</span>
                         </li>
                     </ul>
                 </div>
 
                 {/* Newsletter / CTA */}
                 <div>
-                    <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
+                    <h3 className="text-lg font-semibold mb-4">Güncellemeler</h3>
                     <p className="text-gray-600 mb-4 text-sm md:text-base">
-                        Get educational articles, dental insights, and updates delivered straight to your inbox.
+                        Kısa bilgilendirmeler ve rehber guncellemeleri için e-posta birakin.
                     </p>
                     <form
                         onSubmit={(e) => e.preventDefault()}
@@ -71,14 +71,14 @@ export default function Footer() {
                     >
                         <input
                             type="email"
-                            placeholder="Your email address"
+                            placeholder="E-posta adresiniz"
                             className="w-full rounded-full border border-gray-300 px-4 py-2 text-sm focus:border-[#21CDC0] focus:ring-1 focus:ring-[#21CDC0]"
                         />
                         <button
                             type="submit"
                             className="bg-[#21CDC0] hover:bg-[#1bb5a9] text-white text-sm font-semibold px-5 py-2 rounded-full transition"
                         >
-                            Subscribe
+                            Kaydol
                         </button>
                     </form>
                 </div>
@@ -86,7 +86,7 @@ export default function Footer() {
 
             {/* Copyright */}
             <div className="border-t border-gray-200 py-5 text-center text-gray-500 text-sm">
-                © {new Date().getFullYear()} TürkiyeDental. All rights reserved.
+                © {new Date().getFullYear()} Diş Tedavi Rehberi. Tum haklari saklidir.
             </div>
         </footer>
     );

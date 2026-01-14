@@ -124,7 +124,7 @@ export default function AdminClinicsPage() {
 
     const handleDelete = async (id: string) => {
         const confirmed = window.confirm(
-            "Are you sure you want to delete this clinic? This will not delete existing reviews.",
+            "Are you süre you want to delete this clinic? This will not delete existing reviews.",
         );
         if (!confirmed) return;
         try {

@@ -63,7 +63,7 @@ export default function Topbar() {
                             onClick={() => setOpen(v => !v)}
                             className="px-3 h-8 inline-flex items-center rounded-md border border-gray-300 text-brand-secondary hover:bg-brand-surface"
                         >
-                            24/7 Assistance
+                            7/24 Destek
                         </button>
                         {open && (
                             <div className="absolute left-0 mt-2 w-80 rounded-lg border bg-white shadow-lg p-3 z-[70]">
@@ -71,19 +71,19 @@ export default function Topbar() {
                                     <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-primary text-white text-sm">
                                         ☎
                                     </span>
-                                    <span className="font-semibold text-brand-secondary">Emergency / Questions</span>
+                                    <span className="font-semibold text-brand-secondary">Acil / Sorular</span>
                                 </div>
                                 <a href="tel:+902122222222" className="block font-medium text-brand-primary hover:underline">
                                     +90 212 222 22 22
                                 </a>
                                 <p className="text-brand-muted text-[13px] mt-1">
-                                    Implants, veneers, All-on-4 için 7/24 koordinatör desteği.
+                                    Süreç ve randevu sorulari için destek.
                                 </p>
                                 <Link
                                     href="/start"
                                     className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-brand-primary py-2 text-white font-semibold hover:bg-brand-primaryDark"
                                 >
-                                    Get Free Second Opinion
+                                    Ön Değerlendirme Al
                                 </Link>
                             </div>
                         )}
@@ -93,14 +93,14 @@ export default function Topbar() {
                     <li className="flex items-center gap-1">
                         <IconPhone className="h-4 w-4 fill-[#25D366]" />
                         <a href="tel:+14372662552" className="hover:underline">
-                            Call: +1 437 266 2552
+                            Ara: +1 437 266 2552
                         </a>
                     </li>
 
                     {/* For Clinics */}
                     <li className="hidden md:flex items-center gap-1">
                         <span>👤</span>
-                        <Link href="/for-clinics" className="hover:underline">For Clinics</Link>
+                        <Link href="/for-clinics" className="hover:underline">Klinikler İçin</Link>
                     </li>
                 </ul>
 

@@ -26,16 +26,16 @@ export default function ThankView() {
 
     return (
         <main className="max-w-3xl mx-auto px-4 py-16 text-center">
-            <h1 className="text-3xl font-bold text-[#2B3A55]">Thank you!</h1>
+            <h1 className="text-3xl font-bold text-[#2B3A55]">Tesekkurler!</h1>
             <p className="text-gray-700 mt-3">
-                We’ve received your request. Our clinicians will review your details and follow up with an unbiased second opinion.
+                Talebiniz alinmistir. Uygun bağımsız kliniklerle paylasilacaktir.
             </p>
 
             <p className="text-gray-500 mt-6">
-                Returning you to your previous page in <strong>{seconds}</strong> seconds…
+                <strong>{seconds}</strong> saniye içinde onceki sayfaya yonlendiriliyorsunuz…
             </p>
             <p className="mt-4">
-                <Link href={from} className="text-[#3FB8FF] hover:underline">Go back now</Link>
+                <Link href={from} className="text-[#3FB8FF] hover:underline">Simdi geri don</Link>
             </p>
         </main>
     );

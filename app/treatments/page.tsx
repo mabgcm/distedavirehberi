@@ -2,40 +2,40 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Treatments | TürkiyeDental",
-    description: "Explore TürkiyeDental’s treatment guides, including dental implants, crowns, veneers, All-on-4, and All-on-6 options.",
+    title: "Tedaviler | Diş Tedavi Rehberi",
+    description: "İmplant, kaplama, lamina, All-on-4 ve All-on-6 gibi tedavilere dair kısa rehberler.",
 };
 
 const treatmentCards = [
     {
-        title: "Dental Implants",
+        title: "İmplant",
         href: "/treatments/dental-implants",
-        desc: "Clear answers on cost, safety, pain, and timelines so you can choose implants with confidence.",
-        tag: "Implants",
+        desc: "Uygunluk, süreç ve risk başlıklarını kısa ozetler.",
+        tag: "İmplant",
     },
     {
-        title: "Dental Crowns",
+        title: "Kaplama (Kron)",
         href: "/treatments/dental-crowns",
-        desc: "When to crown, when not to, material choices, and how to avoid overtreatment.",
-        tag: "Crowns",
+        desc: "Ne zaman dusunulur, hangi materyaller vardir?",
+        tag: "Kaplama",
     },
     {
-        title: "Veneers",
+        title: "Lamina / Veneer",
         href: "/treatments/veneers",
-        desc: "Pros, downsides, costs, longevity, and whether veneers fit your smile goals.",
-        tag: "Cosmetic",
+        desc: "Estetik beklenti, sinirlar ve bakım notlari.",
+        tag: "Estetik",
     },
     {
         title: "All-on-4",
         href: "/treatments/allon4",
-        desc: "Full-arch fixed solutions: timelines, provisional teeth, and long-term maintenance.",
-        tag: "Full-arch",
+        desc: "Tam çene sabit cozumlerde süreç ve bakım.",
+        tag: "Tam Çene",
     },
     {
         title: "All-on-6",
         href: "/treatments/allon6",
-        desc: "Compare to other full-arch options, understand costs, healing, and quotes.",
-        tag: "Full-arch",
+        desc: "Seçenekleri ve uygunluk kriterlerini ozetler.",
+        tag: "Tam Çene",
     },
 ];
 
@@ -44,10 +44,10 @@ export default function TreatmentsIndex() {
         <main className="bg-gray-50 text-brand-secondary">
             <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-6">
                 <div className="space-y-3 text-center md:text-left">
-                    <p className="text-xs uppercase tracking-[0.14em] text-brand-muted">Treatments</p>
-                    <h1 className="text-3xl sm:text-4xl font-bold">Find the right treatment guide</h1>
+                    <p className="text-xs uppercase tracking-[0.14em] text-brand-muted">Tedaviler</p>
+                    <h1 className="text-3xl sm:text-4xl font-bold">Doğru tedavi rehberi</h1>
                     <p className="text-gray-700 max-w-3xl">
-                        Clinic-independent guidance on implants, crowns, veneers, and full-arch solutions. Understand costs, timelines, healing, and what to ask before you travel.
+                        Klinik dışı ve tarafsız ozetler. Süreç, uygunluk ve doktorla sorulacaklari netlestirin.
                     </p>
                 </div>
 
@@ -72,33 +72,33 @@ export default function TreatmentsIndex() {
             <section className="bg-white border-t border-gray-200 py-12">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-6 items-center">
                     <div className="space-y-3">
-                        <p className="text-xs uppercase tracking-[0.14em] text-brand-muted">Need a second opinion?</p>
-                        <h2 className="text-2xl sm:text-3xl font-bold">Get a free clinic-independent review</h2>
-                        <p className="text-gray-700 text-sm">
-                            Upload your photos, X-rays, and quotes. We outline options, timelines, and what to ask—before you commit to any clinic.
-                        </p>
+                    <p className="text-xs uppercase tracking-[0.14em] text-brand-muted">Need a second opinion?</p>
+                    <h2 className="text-2xl sm:text-3xl font-bold">Ön değerlendirme alin</h2>
+                    <p className="text-gray-700 text-sm">
+                        Kısa bilgi ve varsa fotoğraf ekleyin; süreç ve sorulacaklari ozetleyelim.
+                    </p>
                         <div className="flex flex-wrap gap-3">
-                            <Link
-                                href="/upload"
-                                className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-teal-600 text-white font-semibold hover:bg-teal-700 transition"
-                            >
-                                Upload Photos &amp; X-Rays
-                            </Link>
-                            <Link
-                                href="/guides/timeline"
-                                className="inline-flex items-center justify-center px-4 py-3 rounded-full border border-teal-200 text-teal-700 font-semibold hover:bg-teal-50 transition"
-                            >
-                                See timelines
-                            </Link>
+                        <Link
+                            href="/upload"
+                            className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-teal-600 text-white font-semibold hover:bg-teal-700 transition"
+                        >
+                            Ön Değerlendirme Al
+                        </Link>
+                        <Link
+                            href="/guides/timeline"
+                            className="inline-flex items-center justify-center px-4 py-3 rounded-full border border-teal-200 text-teal-700 font-semibold hover:bg-teal-50 transition"
+                        >
+                            Zamanlama
+                        </Link>
                         </div>
                     </div>
                     <div className="bg-brand-surface rounded-2xl border border-gray-200 p-5 space-y-2">
-                        <h3 className="text-lg font-semibold text-brand-secondary">What you’ll get</h3>
+                        <h3 className="text-lg font-semibold text-brand-secondary">Neler alin?</h3>
                         <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-                            <li>Clear explanation of your options</li>
-                            <li>Travel and healing timelines for each option</li>
-                            <li>Questions to ask before you commit</li>
-                            <li>Free legal/dispute support if you’re treated through us; fee-based options for others</li>
+                            <li>Seçeneklerin kısa özeti</li>
+                            <li>Süreç ve zamanlama notlari</li>
+                            <li>Doktora sorulacak sorular</li>
+                            <li>Talep iletimi ve gizlilik</li>
                         </ul>
                     </div>
                 </div>

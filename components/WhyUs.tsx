@@ -18,42 +18,42 @@ type Feature = {
 const FEATURES: Feature[] = [
     {
         icon: ShieldCheck,
-        title: "Independent & Unbiased",
-        text: "We don’t sell treatments. Our only goal is your long-term oral health.",
+        title: "Bağımsız ve Tarafsız",
+        text: "Tedavi sunmayiz; sadece bilgilendirir ve talebinizi ilgili kliniklere iletiriz.",
     },
     {
         icon: SearchCheck,
-        title: "Clear, Transparent Guidance",
-        text: "Options, timelines, materials, outcomes—explained without jargon.",
+        title: "Net ve Sade Rehberlik",
+        text: "Seçenekleri, süreci ve riskleri kısa ve anlaşılır şekilde açıklarız.",
     },
     {
         icon: GraduationCap,
-        title: "Expert Case Reviews",
-        text: "Experienced clinicians review complex plans with practical insight.",
+        title: "Ön Bilgi ve Hazırlık",
+        text: "Doktora sormaniz gerekenleri ve uygunluk başlıklarını ozetleriz.",
     },
     {
         icon: Globe2,
-        title: "Trusted Global Network",
-        text: "Referrals only to vetted clinics that meet quality and safety standards.",
+        title: "Bağımsız Klinikler",
+        text: "Talebiniz sadece uygun görülen bağımsız kliniklerle paylasilir.",
     },
     {
         icon: Scale,
-        title: "Cost–Risk Balance",
-        text: "Fair comparisons of what’s essential vs. optional for your case.",
+        title: "Fiyat Faktörleri",
+        text: "Fiyati nelerin belirledigini açıklar, net fiyat vermez.",
     },
     {
         icon: HeartHandshake,
-        title: "Support at Every Step",
-        text: "From first message to follow-up, we’re on your side throughout.",
+        title: "Süreçte Yanınızda",
+        text: "Karar size ait; biz süreci anlaşılır hale getiririz.",
     },
 ];
 
 const BULLETS = [
-    "Clinic-independent second opinions",
-    "Clear comparisons of viable options",
-    "Realistic timelines & after-care",
-    "Transparent material / lab info",
-    "Referrals only to verified providers",
+    "Klinik dışı ve tarafsız bilgi",
+    "Uygunluk ve risk basliklari",
+    "Süreç ve zamanlama ozetleri",
+    "Doktora sorulacak sorular",
+    "Talep iletimi ve veri kontrollu paylasim",
 ];
 
 export default function WhyUs() {
@@ -98,7 +98,7 @@ export default function WhyUs() {
                     <aside className="lg:pl-2">
                         <div className="sticky top-20 rounded-2xl border border-[#cfeef0] bg-gradient-to-b from-white to-[#f7fffe] p-7 md:p-8 shadow-sm">
                             <h4 className="text-2xl md:text-3xl font-bold text-[#14233d]">
-                                What This Means for You
+                                Size Ne Sağlar
                             </h4>
                             <ul className="mt-5 space-y-3">
                                 {BULLETS.map((b, i) => (
@@ -112,14 +112,14 @@ export default function WhyUs() {
                             <div className="mt-6 h-[3px] w-28 rounded-full bg-gradient-to-r from-[#3FB8FF] to-[#21CDC0]" />
 
                             <p className="mt-4 text-sm text-slate-500">
-                                We educate first—so you can choose confidently.
+                                Once bilgi, sonra karar.
                             </p>
 
                             <a
                                 href="/start?from=/#why-us"
                                 className="mt-6 inline-flex items-center justify-center rounded-full bg-[#21CDC0] px-5 py-3 font-semibold text-white shadow hover:bg-[#1bb5a9] transition"
                             >
-                                Get a Second Opinion
+                                Ön Değerlendirme Al
                             </a>
                         </div>
                     </aside>

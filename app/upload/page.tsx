@@ -4,30 +4,30 @@ import type { Metadata } from "next";
 import StartForm from "@/components/StartForm";
 
 export const metadata: Metadata = {
-    title: "Upload Dental Photos & X-Rays | Free Treatment Plan",
-    description: "Upload your dental photos and X-rays to receive a precise treatment plan, cost estimate, and timeline before you travel to Turkey for dental care.",
+    title: "Ön Değerlendirme | Diş Tedavi Rehberi",
+    description: "Kısa talep formu ve varsa fotoğraf ile on bilgi alin; talebiniz bağımsız kliniklerle paylasilir.",
 };
 
 const steps = [
     {
-        title: "Front smile (teeth together)",
-        body: "Take a clear photo of your front teeth with your bite closed and lips gently pulled back.",
+        title: "On gülüş (disler kapali)",
+        body: "On disleri net gösterecek şekilde, isik iyi olacak bicimde cekin.",
     },
     {
-        title: "Right side bite",
-        body: "Bite down naturally and photograph the right side so we can see how your teeth meet.",
+        title: "Sağ yan kapanis",
+        body: "Dogal kapanisla sağ profilden net bir fotoğraf alin.",
     },
     {
-        title: "Left side bite",
-        body: "Repeat on the left side with a steady, well-lit photo that shows the bite relationship.",
+        title: "Sol yan kapanis",
+        body: "Sol profilden, kapanisi gösteren bir fotoğraf alin.",
     },
     {
-        title: "Lower teeth (looking down)",
-        body: "Open wide and angle the camera from above to show the chewing surfaces of your lower teeth.",
+        title: "Alt disler (yukardan)",
+        body: "Agzi acip alt dislerin çiğneme yuzeyini gösterecek şekilde cekin.",
     },
     {
-        title: "Upper teeth (looking up)",
-        body: "Tilt your head back and aim the camera upward to capture the chewing surfaces of your upper teeth.",
+        title: "Üst disler (aşağıdan)",
+        body: "Basi hafif geriye alarak üst dislerin çiğneme yuzeyini cekin.",
     },
 ];
 
@@ -37,12 +37,12 @@ export default function UploadPage() {
             <section className="max-w-6xl mx-auto px-4 lg:px-8 pt-10 pb-14">
                 <div className="grid lg:grid-cols-5 gap-8 items-center">
                     <div className="lg:col-span-3 space-y-4">
-                        <p className="text-xs uppercase tracking-[0.16em] text-brand-muted">Free treatment review</p>
+                        <p className="text-xs uppercase tracking-[0.16em] text-brand-muted">Ön Değerlendirme</p>
                         <h1 className="text-3xl sm:text-4xl font-bold text-brand-secondary">
-                            Upload Your Dental Photos & X-Rays
+                            Fotoğraf Yükleyin (Varsa)
                         </h1>
                         <p className="text-lg text-gray-700">
-                            Share clear photos and any X-rays you have so our clinicians can review your case, outline a precise plan, and give you an informed estimate before you travel.
+                            Talebinizi daha iyi anlamak için varsa fotoğraf ekleyin. Talebiniz bağımsız kliniklerle paylasilir.
                         </p>
                         <div className="flex flex-wrap gap-3">
                             <Link
@@ -50,13 +50,13 @@ export default function UploadPage() {
                                 className="inline-flex items-center justify-center px-5 py-3 rounded-full text-white font-semibold shadow-sm transition"
                                 style={{ backgroundColor: "#21CDC0" }}
                             >
-                                Upload Photos Now
+                                Ön Değerlendirme Başlat
                             </Link>
                             <a
                                 href="mailto:dentalclinicturkiye@gmail.com"
                                 className="inline-flex items-center justify-center px-5 py-3 rounded-full border border-brand-primary text-brand-primary font-semibold hover:bg-brand-ring transition"
                             >
-                                Prefer email? Send files
+                                E-posta ile gonder
                             </a>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ export default function UploadPage() {
                         <div className="relative w-full h-64 sm:h-72 rounded-2xl bg-white shadow-md border border-gray-200 overflow-hidden">
                             <Image
                                 src="/images/dentalselfy.jpg"
-                                alt="Example collage showing the five dental selfie angles"
+                                alt="Örnek diş fotografi acilari"
                                 fill
                                 className="object-cover"
                                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -79,27 +79,27 @@ export default function UploadPage() {
                 <div className="grid lg:grid-cols-2 gap-8">
                     <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 space-y-3">
                         <h2 className="text-2xl font-semibold text-brand-secondary">
-                            Why Your Photos & X-Rays Are So Important
+                            Fotoğraflar Neden Istenir?
                         </h2>
                         <p className="text-gray-700">
-                            Accurate visuals help us check the condition of your teeth, gums, and bite so we can recommend the safest path forward. The clearer your photos, the more tailored and realistic your plan, costs, and timeline will be.
+                            Görsel bilgi, kliniklerin on degerlendirme yapmasini kolaylastirir.
                         </p>
                         <p className="text-gray-700">
-                            If you have a recent panoramic X-ray, include it. It helps us see bone levels, roots, and existing work so we can flag any risks or additional steps early.
+                            Zorunlu degildir; muayenede netlesir.
                         </p>
                     </div>
                     <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 space-y-3">
                         <h2 className="text-2xl font-semibold text-brand-secondary">
-                            How to Send Your Photos and X-Rays
+                            Fotoğrafları Nasıl Gönderebilirim?
                         </h2>
                         <div className="grid sm:grid-cols-2 gap-4">
                             <div className="rounded-xl border border-brand-ring bg-brand-surface p-4 space-y-2">
-                                <h3 className="text-lg font-semibold text-brand-secondary">Upload via form</h3>
-                                <p className="text-gray-700 text-sm">Attach multiple photos/X-rays directly in the form below. We keep your data secure.</p>
+                                <h3 className="text-lg font-semibold text-brand-secondary">Form ile yükle</h3>
+                                <p className="text-gray-700 text-sm">Asagidaki formdan birden fazla dosya ekleyin.</p>
                             </div>
                             <div className="rounded-xl border border-gray-200 bg-white p-4 space-y-2">
-                                <h3 className="text-lg font-semibold text-brand-secondary">Send by email</h3>
-                                <p className="text-gray-700 text-sm">Email your files to <a className="text-brand-primary underline" href="mailto:dentalclinicturkiye@gmail.com">dentalclinicturkiye@gmail.com</a> with your name and phone.</p>
+                                <h3 className="text-lg font-semibold text-brand-secondary">E-posta ile gonder</h3>
+                                <p className="text-gray-700 text-sm">Dosyalarinizi <a className="text-brand-primary underline" href="mailto:dentalclinicturkiye@gmail.com">dentalclinicturkiye@gmail.com</a> adresine iletebilirsiniz.</p>
                             </div>
                         </div>
                     </div>
@@ -107,10 +107,10 @@ export default function UploadPage() {
             </section>
 
             <section className="max-w-6xl mx-auto px-4 lg:px-8 pb-12 space-y-6">
-                <h2 className="text-2xl font-semibold text-brand-secondary">How to Take Good Dental Photos at Home</h2>
+                <h2 className="text-2xl font-semibold text-brand-secondary">Evde Diş Fotoğrafı Çekimi</h2>
                 <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 space-y-4">
                     <p className="text-gray-700">
-                        Use bright lighting, steady hands, and a clean spoon or fingers to gently retract lips and cheeks if needed. Take all five angles below.
+                        Iyi isikta, titremeden ve net cekmeye calisin. Asagidaki bes aciyi alin.
                     </p>
                     <ol className="space-y-4">
                         {steps.map((step, idx) => (
@@ -129,7 +129,7 @@ export default function UploadPage() {
             </section>
 
             <section className="max-w-6xl mx-auto px-4 lg:px-8 pb-12 space-y-4">
-                <h2 className="text-2xl font-semibold text-brand-secondary">Watch: How to Take Dental Selfies at Home</h2>
+                <h2 className="text-2xl font-semibold text-brand-secondary">Video: Fotoğraf Cekimi</h2>
                 <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-4">
                     <div className="relative w-full overflow-hidden rounded-xl bg-black" style={{ paddingBottom: "56.25%" }}>
                         <video
@@ -147,28 +147,28 @@ export default function UploadPage() {
             </section>
 
             <section className="max-w-6xl mx-auto px-4 lg:px-8 pb-12 space-y-4">
-                <h2 className="text-2xl font-semibold text-brand-secondary">Sending a Panoramic X-Ray (If You Have One)</h2>
+                <h2 className="text-2xl font-semibold text-brand-secondary">Panoramik Röntgen (Varsa)</h2>
                 <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 space-y-2">
                     <p className="text-gray-700">
-                        If you already have a recent panoramic X-ray (taken within the last year), upload it with your photos. A clear pano lets us spot hidden issues, check bone levels for implants, and verify any root canal or crown work before suggesting a plan.
+                        Varsa son rontgeninizi ekleyebilirsiniz. Bu, kliniğin on bilgi almasina yardimci olur.
                     </p>
                 </div>
             </section>
 
             <section className="max-w-6xl mx-auto px-4 lg:px-8 pb-12 space-y-4">
-                <h2 className="text-2xl font-semibold text-brand-secondary">What Happens After You Send Your Images?</h2>
+                <h2 className="text-2xl font-semibold text-brand-secondary">Sonraki Adim Nedir?</h2>
                 <div className="grid lg:grid-cols-3 gap-4">
                     <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-4 space-y-2">
-                        <h3 className="text-lg font-semibold">Clinical review</h3>
-                        <p className="text-gray-700 text-sm">A clinician reviews your photos/X-rays to understand your goals and oral health.</p>
+                        <h3 className="text-lg font-semibold">Talep kontrolü</h3>
+                        <p className="text-gray-700 text-sm">Talebiniz uygun kliniklerle paylasilir.</p>
                     </div>
                     <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-4 space-y-2">
-                        <h3 className="text-lg font-semibold">Plan & estimate</h3>
-                        <p className="text-gray-700 text-sm">We outline treatment options, timelines, and an estimated cost range before you travel.</p>
+                        <h3 className="text-lg font-semibold">Ön bilgi</h3>
+                        <p className="text-gray-700 text-sm">Klinik size süreç ve uygunluk hakkında bilgi verir.</p>
                     </div>
                     <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-4 space-y-2">
-                        <h3 className="text-lg font-semibold">Next steps</h3>
-                        <p className="text-gray-700 text-sm">You get clear next steps and can ask questions—no obligation to book.</p>
+                        <h3 className="text-lg font-semibold">Görüşme</h3>
+                        <p className="text-gray-700 text-sm">Detaylar muayenede netlesir; karar size aittir.</p>
                     </div>
                 </div>
             </section>
@@ -176,9 +176,9 @@ export default function UploadPage() {
             <section className="max-w-6xl mx-auto px-4 lg:px-8 pb-16">
                 <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-8 space-y-6">
                     <div className="space-y-3">
-                        <h2 className="text-2xl font-semibold text-brand-secondary">Upload Form</h2>
+                        <h2 className="text-2xl font-semibold text-brand-secondary">Talep Formu</h2>
                         <p className="text-gray-700 text-sm">
-                            Share your details and attach photos/X-rays. We will respond with a tailored plan and next steps.
+                            Kısa bilgiler ve varsa dosyalarinizi ekleyin.
                         </p>
                     </div>
                     <StartForm />
@@ -189,9 +189,9 @@ export default function UploadPage() {
                 <div className="max-w-6xl mx-auto px-4 lg:px-8">
                     <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                         <div className="space-y-2">
-                            <h2 className="text-2xl font-semibold text-brand-secondary">Ready to share your photos?</h2>
+                            <h2 className="text-2xl font-semibold text-brand-secondary">Talebinizi gonderin</h2>
                             <p className="text-gray-700 text-sm">
-                                Upload now or email us—our clinicians will review and send a clear, unbiased plan.
+                                Formu doldurun ya da e-posta iletin. Talebiniz uygun kliniklere aktarilir.
                             </p>
                         </div>
                         <div className="flex flex-wrap gap-3">
@@ -199,13 +199,13 @@ export default function UploadPage() {
                                 href="/start"
                                 className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-brand-primary text-dark font-semibold hover:bg-brand-primary-dark transition"
                             >
-                                Upload via form
+                                Formu Başlat
                             </Link>
                             <a
                                 href="mailto:dentalclinicturkiye@gmail.com"
                                 className="inline-flex items-center justify-center px-5 py-3 rounded-full border border-brand-primary text-brand-primary font-semibold hover:bg-brand-ring transition"
                             >
-                                Email files
+                                E-posta Gonder
                             </a>
                         </div>
                     </div>

@@ -8,13 +8,13 @@ import { Analytics } from "@vercel/analytics/next"
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "TürkiyeDental",
-  description: "Independent guidance & second opinions",
+  title: "Diş Tedavi Rehberi",
+  description: "Bağımsız bilgilendirme ve talep iletimi",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="tr" suppressHydrationWarning>
       <body suppressHydrationWarning className="bg-white text-[#213360]">
 
         <Suspense fallback={null}>
