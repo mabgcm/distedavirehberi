@@ -12,9 +12,9 @@ export default function Footer() {
                 {/* Brand */}
                 <div>
                     <h2 className="text-2xl font-extrabold mb-4 text-[#1b76d1]">Diş Tedavi Rehberi</h2>
-                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                        Klinik dışı, tarafsız bilgilendirme ile hastalarin tedavi surecini anlamasina yardimci olur.
-                    </p>
+                    <div className="mt-3 text-gray-600 text-sm md:text-sm leading-relaxed space-y-1">
+                        <p>Bu platform sağlık hizmeti sunmaz, teşhis veya tedavi yapmaz, klinik ya da hekim önermez. Kullanıcı taleplerini, bağımsız kliniklere ileten bir aracı platformdur.</p>
+                    </div>
                     <div className="flex gap-4 mt-5">
                         <Link href="https://www.facebook.com/profile.php?id=61584497004756" className="hover:text-[#21CDC0]" aria-label="Facebook">
                             <Facebook className="h-5 w-5" />
@@ -44,8 +44,8 @@ export default function Footer() {
                     <ul className="space-y-3 text-gray-600 text-sm md:text-base">
                         <li className="flex items-start gap-3">
                             <Mail className="h-5 w-5 text-[#1b76d1] mt-0.5" />
-                            <a href="mailto:dentalclinicturkiye@gmail.com" className="hover:text-[#1b76d1]">
-                                dentalclinicturkiye@gmail.com
+                            <a href="mailto:distedavirehberi@gmail.com" className="hover:text-[#1b76d1]">
+                                distedavirehberi@gmail.com
                             </a>
                         </li>
                         <li className="flex items-start gap-3">
