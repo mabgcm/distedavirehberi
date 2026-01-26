@@ -1,21 +1,10 @@
-"use client";
-
-import React, { useState } from "react";
+import Link from "next/link";
 
 export default function HomePage() {
-    const [selectedTopic, setSelectedTopic] = useState("");
-
-    const scrollToCta = () => {
-        const el = document.getElementById("cta");
-        if (el) {
-            el.scrollIntoView({ behavior: "smooth" });
-        }
-    };
-
-    const handleSelect = (topic: string) => {
-        setSelectedTopic(topic);
-        scrollToCta();
-    };
+    const primaryButtonClass =
+        "inline-flex items-center justify-center rounded-full bg-[#21CDC0] px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#1bb5a9] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#21CDC0]";
+    const primaryButtonSmClass =
+        "inline-flex items-center justify-center rounded-full bg-[#21CDC0] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#1bb5a9] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#21CDC0]";
 
     return (
         <div className="min-h-screen bg-slate-50 text-slate-900">
@@ -24,131 +13,53 @@ export default function HomePage() {
                     <div className="grid gap-10 md:grid-cols-2 items-center">
                         <div>
                             <p className="text-sm font-semibold tracking-wide text-slate-500">
-                                DİŞ TEDAVİLERİ REHBERİ
+                                TÜRKIYE'NIN İLK
                             </p>
                             <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
                                 Diş Tedavileri Rehberi
                             </h1>
                             <p className="mt-4 text-lg text-slate-700">
-                                Diş kliniği aramana gerek yok.
+                                Diş kliniği aramanıza gerek yok!
                             </p>
                             <p className="text-lg text-slate-700">
-                                Şikâyetini anlat, tedavi seçenekleri hakkında ön bilgi al.
+                                Şikâyetinizi anlatın, tedavi seçenekleri hakkında ön bilgi alın.
                             </p>
 
                             <div className="mt-6 space-y-2 text-slate-700">
-                                <p>Diş problemini bizimle paylaşırsın.</p>
-                                <p>Talebini, ilgili bağımsız kliniklere iletiriz.</p>
-                                <p>Klinikler seninle iletişime geçer.</p>
+                                <p>Diş probleminizi bizimle paylaşın.</p>
+                                <p>Talebinizi, ilgili bağımsız kliniklere iletelim.</p>
+                                <p>Klinikler sizinle iletişime geçsin.</p>
                             </div>
 
-                            <p className="mt-4 text-sm text-slate-500">
+                            <p className="mt-4 text-xs text-slate-500">
                                 Klinik veya hekim önermiyoruz. Tedavi uygulamıyoruz.
                             </p>
 
                             <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                                <button
-                                    onClick={scrollToCta}
-                                    className="inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-500"
+                                <Link
+                                    href="/start"
+                                    className={primaryButtonClass}
                                     aria-label="Ön değerlendirme al"
                                 >
                                     Ön değerlendirme al
-                                </button>
+                                </Link>
                                 <a
-                                    href="#treatments"
+                                    href="/treatments"
                                     className="inline-flex items-center justify-center rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-800 hover:bg-white"
                                 >
                                     Tedavileri incele
                                 </a>
                             </div>
-                            <p className="mt-3 text-sm text-slate-500">
-                                Fotoğraf yüklemek zorunlu değildir.
-                            </p>
                         </div>
 
                         <div className="relative">
-                            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                            <div className="rounded-2xl bg-white p-0">
                                 <img
-                                    src="https://placehold.co/600x420"
-                                    alt="Diş sağlığı bilgilendirme görseli yer tutucu"
-                                    className="w-full rounded-xl border border-slate-200"
+                                    src="/images/hero.jpg"
+                                    alt="Diş sağlığı bilgilendirme"
+                                    className="w-full rounded-xl"
                                 />
-                                <div className="mt-4 grid gap-3 sm:grid-cols-3 text-sm text-slate-700">
-                                    <div className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
-                                        Ön bilgi
-                                    </div>
-                                    <div className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
-                                        Talep iletimi
-                                    </div>
-                                    <div className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
-                                        Klinik iletişimi
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            <section id="platform" className="py-14 border-t border-slate-200 bg-white">
-                <div className="max-w-6xl mx-auto px-4">
-                    <h2 className="text-2xl font-semibold">Bu platform ne yapar?</h2>
-                    <p className="mt-3 text-slate-700">
-                        Diş tedavisiyle ilgili bir sorunun varsa ama nereden başlayacağını bilmiyorsan, burası bunun için var.
-                    </p>
-
-                    <div className="mt-8 grid gap-6 md:grid-cols-3">
-                        <div className="md:col-span-2 grid gap-6">
-                            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-                                <h3 className="text-lg font-semibold">Ne yapıyoruz?</h3>
-                                <ul className="mt-3 list-disc pl-5 text-slate-700 space-y-1">
-                                    <li>Diş şikâyetini ve beklentilerini alıyoruz</li>
-                                    <li>Olası tedavi seçenekleri hakkında ön bilgi sunuyoruz</li>
-                                    <li>Talebini, ilgili kliniklere iletiyoruz</li>
-                                </ul>
-                            </div>
-                            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-                                <h3 className="text-lg font-semibold">Ne yapmıyoruz?</h3>
-                                <ul className="mt-3 list-disc pl-5 text-slate-700 space-y-1">
-                                    <li>Klinik veya hekim önermiyoruz</li>
-                                    <li>Tedavi planı dayatmıyoruz</li>
-                                    <li>Karar vermen için baskı yapmıyoruz</li>
-                                </ul>
-                                <p className="mt-4 text-sm text-slate-600">
-                                    Karar her zaman hasta ve hekim arasındadır.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                            <h3 className="text-lg font-semibold">Özet</h3>
-                            <div className="mt-4 space-y-3 text-sm text-slate-700">
-                                <p>Bilgilendirme ve yönlendirme sağlar.</p>
-                                <p>Kararı kullanıcı ve klinik verir.</p>
-                                <p>Tanı veya tedavi uygulamaz.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="mt-8">
-                        <div className="grid gap-4 md:grid-cols-3">
-                            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                                <h4 className="font-semibold">Ne yapıyoruz</h4>
-                                <p className="mt-2 text-sm text-slate-700">
-                                    Şikâyeti alır, seçenekleri sade şekilde anlatır, talebi iletir.
-                                </p>
-                            </div>
-                            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                                <h4 className="font-semibold">Ne yapmıyoruz</h4>
-                                <p className="mt-2 text-sm text-slate-700">
-                                    Klinik ya da hekim seçmeyiz, yönlendirme yapmayız.
-                                </p>
-                            </div>
-                            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                                <h4 className="font-semibold">Neden</h4>
-                                <p className="mt-2 text-sm text-slate-700">
-                                    Tarafsız ve şeffaf bir karar süreci için.
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -157,124 +68,84 @@ export default function HomePage() {
 
             <section id="treatments" className="py-14">
                 <div className="max-w-6xl mx-auto px-4">
-                    <h2 className="text-2xl font-semibold">Hangi konuda bilgi almak istiyorsun?</h2>
+                    <h2 className="text-2xl font-semibold">Hangi konuda bilgi almak istiyorsunuz?</h2>
                     <p className="mt-3 text-slate-700">
-                        Diş tedavileri hakkında temel bilgileri inceleyebilir veya doğrudan ön değerlendirme alabilirsin.
+                        Diş tedavileri hakkında temel bilgileri inceleyebilir veya doğrudan ön değerlendirme alabilirsiniz.
                     </p>
 
-                    <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                        {[
-                            "İmplant",
-                            "Kaplama (Kron)",
-                            "Lamina / Veneer",
-                            "Diş Eti Tedavileri",
-                            "All-on-4 / All-on-6",
-                            "Ortodonti (Tel / Şeffaf Plak)",
-                        ].map((treatment) => (
-                            <button
-                                key={treatment}
-                                onClick={() => handleSelect(treatment)}
-                                className="group rounded-2xl border border-slate-200 bg-white p-5 text-left shadow-sm transition hover:border-slate-300 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-500"
-                                aria-label={`${treatment} için ön değerlendirme al`}
-                            >
-                                <div className="text-sm text-slate-500">Tedavi</div>
-                                <div className="mt-2 text-lg font-semibold text-slate-900">
-                                    {treatment}
-                                </div>
-                                <div className="mt-3 text-sm text-slate-600">
-                                    Ön değerlendirme için tıkla
-                                </div>
-                            </button>
-                        ))}
+                    <div className="mt-6 grid gap-6 lg:grid-cols-2 items-center">
+                        <div className="flex flex-wrap justify-center lg:justify-start gap-3">
+                            {[
+                                { label: "İmplant", href: "/treatments/dental-implants" },
+                                { label: "Kaplama (Kron)", href: "/treatments/dental-crowns" },
+                                { label: "Lamina / Veneer", href: "/treatments/veneers" },
+                                { label: "Diş Eti Tedavileri", href: "/treatments" },
+                                { label: "All-on-4 / All-on-6", href: "/treatments/allon4" },
+                                { label: "Ortodonti (Tel / Şeffaf Plak)", href: "/treatments" },
+                            ].map((treatment) => (
+                                <Link
+                                    key={treatment.href}
+                                    href={treatment.href}
+                                    className="inline-flex items-center rounded-full border border-slate-300 bg-white px-6 py-3 text-lg font-semibold text-slate-900 shadow-sm hover:border-slate-400 hover:bg-slate-50"
+                                >
+                                    {treatment.label}
+                                </Link>
+                            ))}
+                        </div>
+                        <div className="rounded-2xl bg-white p-0">
+                            <img
+                                src="/images/treatment.jpg"
+                                alt="Dis tedavileri"
+                                className="w-full rounded-xl"
+                            />
+                        </div>
                     </div>
 
-                    <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                        <p className="text-slate-700">Her tedavi sayfasında:</p>
-                        <ul className="mt-3 list-disc pl-5 text-slate-700 space-y-1">
-                            <li>Kimler için uygun olduğu</li>
-                            <li>Kimler için uygun olmadığı</li>
-                            <li>Süreç ve genel riskler</li>
-                            <li>Fiyatı etkileyen faktörler</li>
-                        </ul>
-                        <p className="mt-2 text-slate-700">net ve sade şekilde anlatılır.</p>
-                    </div>
-                </div>
-            </section>
 
-            <section id="symptoms" className="py-14 border-t border-slate-200 bg-white">
-                <div className="max-w-6xl mx-auto px-4">
-                    <h2 className="text-2xl font-semibold">Bu belirtiler sende var mı?</h2>
-                    <p className="mt-3 text-slate-700">Bazı diş problemleri ağrı yapmadan ilerleyebilir.</p>
-                    <p className="text-slate-700">
-                        Aşağıdaki belirtilerden biri veya birkaçı sende varsa, ön bilgi almak faydalı olabilir.
-                    </p>
-
-                    <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                        {[
-                            "Diş eti kanaması",
-                            "Soğuk veya sıcak hassasiyeti",
-                            "Çiğnerken ağrı",
-                            "Diş sallanması",
-                            "Kırık veya çatlak diş",
-                            "Ağız kokusu",
-                        ].map((symptom) => (
-                            <button
-                                key={symptom}
-                                onClick={() => handleSelect(symptom)}
-                                className="rounded-2xl border border-slate-200 bg-slate-50 p-5 text-left shadow-sm transition hover:border-slate-300 hover:bg-white hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-500"
-                                aria-label={`${symptom} için ön değerlendirme al`}
-                            >
-                                <div className="text-sm text-slate-500">Belirti</div>
-                                <div className="mt-2 text-lg font-semibold text-slate-900">
-                                    {symptom}
-                                </div>
-                                <div className="mt-3 text-sm text-slate-600">
-                                    Ön değerlendirme için tıkla
-                                </div>
-                            </button>
-                        ))}
-                    </div>
-
-                    <p className="mt-6 text-slate-700">
-                        Belirtiye göre bilgi alabilir veya doğrudan ön değerlendirme başlatabilirsin.
-                    </p>
                 </div>
             </section>
 
             <section id="how" className="py-14">
                 <div className="max-w-6xl mx-auto px-4">
-                    <h2 className="text-2xl font-semibold">Nasıl çalışır?</h2>
+                    <h2 className="text-2xl font-semibold">Süreç Nasıl çalışır?</h2>
 
                     <div className="mt-6 grid gap-4 md:grid-cols-3">
                         <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                             <div className="text-sm text-slate-500">Adım 1</div>
-                            <h3 className="mt-2 text-lg font-semibold">1. Talebini oluştur</h3>
+                            <h3 className="mt-2 text-lg font-semibold">1. Talebinizi oluşturun</h3>
                             <p className="mt-2 text-slate-700">
-                                Şikâyetini seç, varsa fotoğraf veya röntgen yükle.
+                                Şikâyetinizi seçin, varsa dişlerinizin fotoğrafı veya diş röntgeni yükleyin.
                             </p>
                         </div>
                         <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                             <div className="text-sm text-slate-500">Adım 2</div>
-                            <h3 className="mt-2 text-lg font-semibold">2. Talebin iletilir</h3>
+                            <h3 className="mt-2 text-lg font-semibold">2. Talebiniz iletilir</h3>
                             <p className="mt-2 text-slate-700">
-                                Bilgilerin, ilgili bağımsız kliniklere yönlendirilir.
+                                Bilgileriniz, ilgili bağımsız kliniklere yönlendirilir.
                             </p>
                             <p className="text-slate-700">Klinik isimleri sitede yer almaz.</p>
                         </div>
                         <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                             <div className="text-sm text-slate-500">Adım 3</div>
                             <h3 className="mt-2 text-lg font-semibold">
-                                3. Klinikler seninle iletişime geçer
+                                3. Klinikler sizinle iletişime geçer
                             </h3>
                             <p className="mt-2 text-slate-700">
-                                Uygunluk, süreç ve maliyetle ilgili detayları doğrudan klinikten öğrenirsin.
+                                Uygunluk, süreç ve maliyetle ilgili detayları doğrudan klinikten öğrenirsiniz.
                             </p>
                         </div>
                     </div>
-
-                    <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-                        <p className="text-slate-700">Biz sadece aracı platformuz.</p>
-                        <p className="text-slate-700">Tedavi yapmayız, klinik seçmeyiz.</p>
+                    <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                        <img
+                            src="images/smile.jpg"
+                            alt="Süreç adımlarını anlatan görsel yer tutucu"
+                            className="w-full rounded-2xl"
+                        />
+                        <img
+                            src="images/clinic.jpg"
+                            alt="İletişim ve değerlendirme sürecini anlatan görsel yer tutucu"
+                            className="w-full rounded-2xl"
+                        />
                     </div>
                 </div>
             </section>
@@ -288,35 +159,15 @@ export default function HomePage() {
                     <p className="text-slate-700">
                         Ancak fiyatı etkileyen bazı temel faktörler vardır:
                     </p>
-
-                    <ul className="mt-4 list-disc pl-5 text-slate-700 space-y-1">
-                        <li>Tedavi türü</li>
-                        <li>Kullanılacak malzeme</li>
-                        <li>Gerekli ek işlemler</li>
-                        <li>Tedavi süresi ve seans sayısı</li>
-                    </ul>
+                    <img
+                        src="images/faktors.jpg"
+                        alt="Fiyatı etkileyen faktörleri anlatan görsel yer tutucu"
+                        className="mt-6 w-full rounded-2xl"
+                    />
 
                     <p className="mt-4 text-slate-700">
-                        Bu faktörleri anlamak, doğru karar vermene yardımcı olur.
+                        Bu faktörleri anlamak, doğru karar vermenize yardımcı olur.
                     </p>
-                </div>
-            </section>
-
-            <section id="why-no-clinic" className="py-14">
-                <div className="max-w-6xl mx-auto px-4">
-                    <h2 className="text-2xl font-semibold">Neden sitede klinik adı yok?</h2>
-                    <p className="mt-3 text-slate-700">Çünkü tarafsız kalmak istiyoruz.</p>
-
-                    <ul className="mt-4 list-disc pl-5 text-slate-700 space-y-1">
-                        <li>Klinik reklamı yapmıyoruz</li>
-                        <li>Klinik veya hekim önermiyoruz</li>
-                        <li>Hastayı belirli bir yere yönlendirmiyoruz</li>
-                    </ul>
-
-                    <div className="mt-4 text-slate-700">
-                        <p>Talep hastadan gelir, klinik geri dönüş yapar.</p>
-                        <p>Bu sayede karar süreci daha şeffaf ve rahat ilerler.</p>
-                    </div>
                 </div>
             </section>
 
@@ -349,29 +200,21 @@ export default function HomePage() {
             <section id="cta" className="py-16">
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-                        <h2 className="text-2xl font-semibold">Ön değerlendirme almak ister misin?</h2>
+                        <h2 className="text-2xl font-semibold">Ön değerlendirme almak ister misiniz?</h2>
                         <div className="mt-3 text-slate-700 space-y-1">
                             <p>Satış baskısı yok.</p>
                             <p>Klinik önerisi yok.</p>
-                            <p>Şikâyetini anlat, süreci netleştir.</p>
+                            <p>Şikâyetinizi anlatın, süreci netleştirin.</p>
                         </div>
 
-                        {selectedTopic && (
-                            <p className="mt-4 text-sm text-slate-600">
-                                Seçimin: <span className="font-semibold">{selectedTopic}</span>
-                            </p>
-                        )}
-
                         <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                            <button
-                                className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-500"
+                            <Link
+                                href="/start"
+                                className={primaryButtonClass}
                                 aria-label="Ön değerlendirme al"
                             >
                                 Ön değerlendirme al
-                            </button>
-                            <p className="text-sm text-slate-500 flex items-center">
-                                Fotoğraf yüklemek isteğe bağlıdır.
-                            </p>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -385,23 +228,23 @@ export default function HomePage() {
                         {[
                             {
                                 q: "Bu site bir diş kliniği mi?",
-                                a: "Hayır. Tedavi sunmuyoruz.",
+                                a: "Hayır. Bu site bir diş kliniği değildir ve sağlık hizmeti sunmaz. Amacımız, diş tedavisiyle ilgili şikâyeti olan kişilerin süreci daha iyi anlamasına yardımcı olmak ve taleplerini ilgili kliniklere iletmektir. Tedavi, muayene ve karar süreci tamamen hasta ile hekim arasında gerçekleşir.",
                             },
                             {
                                 q: "Tedavi satıyor musunuz?",
-                                a: "Hayır. Talep toplar ve iletiriz.",
+                                a: "Hayır. Biz tedavi satışı yapmayız ve tedavi planı sunmayız. Platformumuz, yalnızca ön bilgi ve yönlendirme amacıyla çalışır. Tedaviye dair tüm detaylar, kliniklerin kendi değerlendirmesi ve hasta ile doğrudan iletişimi sonucunda netleşir.",
                             },
                             {
                                 q: "Klinik nasıl belirleniyor?",
-                                a: "Biz klinik seçmeyiz. Talep, ilgili kliniklere iletilir.",
+                                a: "Biz klinik seçimi yapmayız ve belirli bir kliniği önermeyiz. Paylaştığınız talep, şikâyetiniz ve ihtiyaçlarınıza uygun olabilecek bağımsız kliniklere iletilir. Klinikler, uygunluk durumuna göre sizinle doğrudan iletişime geçer.",
                             },
                             {
                                 q: "Bilgilerim kimlerle paylaşılır?",
-                                a: "Sadece talebinle ilgili kliniklerle.",
+                                a: "Paylaştığınız bilgiler, yalnızca talebinizle ilgili kliniklere iletilir. Kişisel verileriniz üçüncü kişilerle paylaşılmaz ve farklı amaçlarla kullanılmaz. Süreç, gizlilik ve KVKK kurallarına uygun şekilde yürütülür.",
                             },
                             {
                                 q: "Ön değerlendirme ücretli mi?",
-                                a: "Hayır. Ücretsizdir.",
+                                a: "Hayır. Ön değerlendirme tamamen ücretsizdir. Bu aşamada herhangi bir ödeme yapmanız gerekmez. Amaç, tedavi seçenekleri ve süreç hakkında genel bir çerçeve oluşturmanızdır. Olası maliyetler ve detaylar, kliniklerle yapacağınız görüşmelerde netleşir.",
                             },
                         ].map((item) => (
                             <details
